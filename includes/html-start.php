@@ -1,6 +1,3 @@
-<?php
-require_once("./includes/connection.php") ;
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +17,6 @@ require_once("./includes/connection.php") ;
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
