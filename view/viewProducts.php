@@ -4,12 +4,15 @@ include("includes/connection.php");
 
 <div class="products-catagories-area clearfix">
     <div class="amado-pro-catagory clearfix">
-   <?php 
+    <?php 
     $sql = "SELECT * FROM `products`  ORDER BY `Id` DESC";
     $result = mysqli_query($con,$sql);
     if($result){
         if(mysqli_num_rows($result)>0){
             while($row = mysqli_fetch_array($result)){
+                $prodID = $row['Id'];
+                $prodName = $row['ProductName'];
+                $prodPrice = $row['Price'];
                 ?>
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
@@ -18,7 +21,13 @@ include("includes/connection.php");
                     <p><?php echo $row['Price']." kr"; ?></p>
                     <h4><?php echo $row['ProductName']; ?></h4>
                     <p><?php echo $row['Description']; ?></p>
-                    <button>Add To Cart</button>
+                    <button
+                        class="btn amado-btn w-50" 
+                        onclick="addtocart(<?php echo $prodID; ?>,
+                        '<?php echo $prodName; ?>',
+                        <?php echo $prodPrice; ?>)">
+                        Add To Cart
+                    </button>
                 </div>
             </div>
             <?php
