@@ -15,11 +15,15 @@ include("includes/connection.php");
                 $prodPrice = $row['Price'];
                 ?>
                 <!-- Single Catagory -->
+                <br>
+                <br>
                 <div class="single-products-catagory clearfix">
-                   <?php echo '<img style="width:350px; height:350px;" src="data:image/jpeg;base64,'.base64_encode( $row['Image'] ).'"/>'; ?>
+                   <?php echo '<img style="width:350px; height:350px;" src="data:image/jpeg;base64,'
+                   .base64_encode( $row['Image'] ).'"/>';?>
                     <div class="line"></div>
+                    <br>
                     <p><?php echo $row['Price']." kr"; ?></p>
-                    <h4><?php echo $row['ProductName']; ?></h4>
+                    <h5><?php echo $row['ProductName']; ?></h5>
                     <p><?php echo $row['Description']; ?></p>
                     <button
                         class="btn amado-btn w-50" 
@@ -29,6 +33,9 @@ include("includes/connection.php");
                         Add To Cart
                     </button>
                 </div>
+                <br>
+                <br>
+                <br>
             </div>
             <?php
             }

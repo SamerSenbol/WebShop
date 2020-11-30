@@ -13,6 +13,7 @@
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="cart.php">Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
     <!-- Cart Menu -->
@@ -20,12 +21,12 @@
         <a href="cart.php" class="cart-nav">
             <img src="img/core-img/cart.png" alt="">
             Cart
-            <?php if(isset($_SESSION['cart']) || count($_SESSION['cart']) != 0){ ?>
+            <?php if(isset($_SESSION['cart'])){?>
             <span>
             (<?php echo count($_SESSION['cart']); ?>)
             </span>
             <?php }else{ echo"<span>(0)
-            </span>" ?>
+            </span>"; ?>
             
             <?php } ?>
         </a>
