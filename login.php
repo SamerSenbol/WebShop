@@ -8,12 +8,22 @@ if(isset($_POST['loginBtn'])){
 
     $email = $_POST['email'];
     $password = $_POST['password']; 
-
-    $loginFtnResult = login($email,$password); //call login function
+    $encyPass = md5($password);
+    $loginFtnResult = login($email,$encyPass); //call login function
    
     if($loginFtnResult === true){ 
-        header("location:index.php");
-        exit();
+        if(isset($_SESSION['userRole'])){
+            $role = $_SESSION['userRole'];
+            if($role == "Admin"){
+                header("location:admin.php");
+                exit();
+            }
+            else if($role == "User"){
+                header("location:index.php");
+                exit();
+            }
+        }
+      
     }else if($loginFtnResult == "WEP"){
         echo "Invalid Email or Passeord Please Enter Correct one";
     }else{
@@ -48,7 +58,7 @@ if(isset($_POST['loginBtn'])){
                         <input type="password" class="form-control" placeholder="Password" name="password" required>
                     </div>
                     <button type="submit" class="btn btn-black" name="loginBtn">Login</button>
-                    <button type="submit" class="btn btn-secondary" href="register.php">Register</button>
+                    <a  class="btn btn-secondary" href="register.php">Register</a>
                 </form>
                 </div>
             </div>

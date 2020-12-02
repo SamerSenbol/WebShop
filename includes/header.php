@@ -14,6 +14,7 @@
             <li><a href="cart.php">Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
             <li><a href="login.php">Login</a></li>
+            <li><a href="admin.php">Admin</a></li>
         </ul>
     </nav>
     <!-- Cart Menu -->
