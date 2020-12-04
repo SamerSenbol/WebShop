@@ -78,11 +78,10 @@ include("includes/functions.php");
                             <ul class="summary-table">
                                 <!-- sum all prices of cart items-->
                                 <li><span>subtotal:</span> <span><?php echo array_sum($subtotalArray)." Kr"; ?></span></li>
-                                <li><span>delivery:</span> <span>Free</span></li>
-                                <li><span>total:</span> <span><?php echo array_sum($subtotalArray)." Kr"; ?></span></li>
+                                <!-- <li><span>total:</span> <span><?php echo array_sum($subtotalArray)." Kr"; ?></span></li> -->
                             </ul>
                             <div class="cart-btn mt-100">
-                                <a href="cart.html" class="btn amado-btn w-100">Checkout</a>
+                                <a href="checkout.php" class="btn amado-btn w-100">Checkout</a>
                             </div>
                         </div>
                     </div>

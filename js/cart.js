@@ -21,3 +21,14 @@ function addtocart(id,name,price){
     }
    });
  }
+
+
+
+ function calculateTotalAmount(shippingAmount){
+  var subtotal = parseInt($("#subtotal").val());
+  var totAmount = subtotal + shippingAmount;
+  $("#shippingAmount").html(shippingAmount+" Kr");
+  $("#totAmount").val(totAmount);
+  $("#total").html(totAmount+" Kr");
+
+}

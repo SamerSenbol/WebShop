@@ -12,9 +12,11 @@
         <ul>
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="cart.php">Cart</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="checkout.php">Checkout</a></li>
             <li><a href="login.php">Login</a></li>
+           <?php  if($role == "Admin"){ ?>
             <li><a href="admin.php">Admin</a></li>
+           <?php } ?>
         </ul>
     </nav>
     <!-- Cart Menu -->

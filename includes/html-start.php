@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php session_start(); 
+$role = "";
+if(isset($_SESSION['userRole'])){
+    $role = $_SESSION['userRole'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

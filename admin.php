@@ -1,11 +1,6 @@
 <?php
 ob_start();
-$role = "";
 include "./includes/html-start.php";
-if(isset($_SESSION['userRole'])){
-    $role = $_SESSION['userRole'];
-}
-
 if($role != "Admin"){
     ?>
     <script>
