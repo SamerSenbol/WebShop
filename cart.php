@@ -2,8 +2,6 @@
 ob_start();
 include("./includes/html-start.php");
 include("includes/connection.php");
-include("includes/functions.php");
-
 ?>
 
 <body>

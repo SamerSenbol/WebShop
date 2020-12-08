@@ -32,9 +32,9 @@ if($role != "Admin"){
             <br>
             <div class="col-md-12">
                 <div class="admin-form">
-                    <a href=""><h4>View Orders</h4></a>
+                    <a href="orders.php"><h4>View Orders</h4></a>
                     <br>
-                    <a href=""><h4>Edit Products</h4></a>
+                    <a href=products.php><h4>Edit Products</h4></a>
                 </div>
             </div>
         </div>

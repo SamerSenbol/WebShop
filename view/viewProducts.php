@@ -5,7 +5,7 @@ include("includes/connection.php");
 <div class="products-catagories-area clearfix">
     <div class="amado-pro-catagory clearfix">
     <?php 
-    $sql = "SELECT * FROM `products`  ORDER BY `Id` DESC";
+     include("api/categoriesHandler.php");
     $result = mysqli_query($con,$sql);
     if($result){
         if(mysqli_num_rows($result)>0){

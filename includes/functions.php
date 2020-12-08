@@ -31,7 +31,7 @@ function checkProdInCart($prodID){
     }
   }
 
-  function updateProducQty ($prodID){
+function updateProducQty ($prodID){
     global $con;
     $sql = "SELECT `Quantity` FROM `products` WHERE `Id` = '$prodID'";
     $result = mysqli_query($con,$sql);
@@ -71,6 +71,15 @@ function placeOrder($fname,$lname,$email,$address,$postNumber,$mobile,$totAmount
         return false;
     }
 
+}
+
+
+function isLogin(){
+    if(isset($_SESSION['userRole'])  && $_SESSION['userRole'] !="" ){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 ?>

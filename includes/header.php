@@ -1,3 +1,6 @@
+<?php 
+include("functions.php");
+?>
 <header class="header-area clearfix">
     <!-- Close Icon -->
     <div class="nav-close">
@@ -10,10 +13,23 @@
     <!-- Amado Nav -->
     <nav class="amado-nav">
         <ul>
-            <li class="active"><a href="index.php">Home</a></li>
-            <li><a href="cart.php">Cart</a></li>
+            <li class="active"><a href="index.php">Products</a></li>
+            <li class="active"><a href="categories.php">Categories</a></li>
+            
             <li><a href="checkout.php">Checkout</a></li>
-            <li><a href="login.php">Login</a></li>
+            <?php if(isLogin() === false){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            } ?>
+
+            <?php if(isLogin() === true){
+                ?>
+                <li><a href="signOut.php">Sign out</a></li>
+                <?php
+            } ?>
+            
+            
            <?php  if($role == "Admin"){ ?>
             <li><a href="admin.php">Admin</a></li>
            <?php } ?>
