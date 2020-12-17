@@ -1,7 +1,3 @@
-<?php
-include("includes/connection.php");
-?>
-
 <div class="clearfix"></div>
 <h1>Select one of categories</h1>
 <div style="  margin-left: -230px; margin-top: 100px;">

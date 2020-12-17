@@ -1,7 +1,6 @@
 <?php
 ob_start();
 include "./includes/html-start.php";
-include "./includes/connection.php";
 if($role != "Admin"){
     ?>
     <script>

@@ -1,6 +1,4 @@
 <?php
-include("includes/connection.php"); 
-
 function login($email,$password){
     global $con;
 

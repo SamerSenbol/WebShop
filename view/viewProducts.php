@@ -1,7 +1,3 @@
-<?php
-include("includes/connection.php");
-?>
-
 <div class="products-catagories-area clearfix">
     <div class="amado-pro-catagory clearfix">
     <?php 

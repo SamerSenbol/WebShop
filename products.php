@@ -1,7 +1,6 @@
 <?php
 ob_start();
 include "./includes/html-start.php";
-include "./includes/connection.php";
 include "./api/productsHandler.php";
 if($role != "Admin"){
     ?>
@@ -52,7 +51,7 @@ if($role != "Admin"){
                                                     <tr>
                                                         <td><?php echo $row['Id']; ?></td>
                                                         <td><?php echo $row['ProductName']; ?></td>
-                                                        <td><?php echo $row['CategoryName']; ?></td>
+                                                        <td><?php echo $row['CategoryId']; ?></td>
                                                         <td><?php echo $row['Description']; ?></td>
                                                         <td>
                                                             <?php echo '<img style="width:50px; height:50px;" src="data:image/jpeg;base64,'

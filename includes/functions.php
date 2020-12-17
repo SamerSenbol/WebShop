@@ -1,5 +1,4 @@
 <?php 
-include("connection.php");
 
 /*getting product image form the database--*/
 function getProductImage($prodId){

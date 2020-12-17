@@ -1,6 +1,5 @@
 <?php
 ob_start();
-include "./includes/connection.php";
 include "./includes/html-start.php";
 
 ?>

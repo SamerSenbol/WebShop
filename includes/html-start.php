@@ -1,4 +1,7 @@
 <?php session_start(); 
+include("class/dbClass.php");
+$db = new dbClass();
+$con = $db->connect();
 $role = "";
 if(isset($_SESSION['userRole'])){
     $role = $_SESSION['userRole'];

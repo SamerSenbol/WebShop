@@ -10,7 +10,7 @@ if(isset($_GET['categoryID'])){
                 <?php
             }
         }
-        $sql = "SELECT * FROM `products` WHERE `CategoryName` = '$categoryID'  ORDER BY `Id` DESC";
+        $sql = "SELECT * FROM `products` WHERE `Categoryid` = '$categoryID'  ORDER BY `Id` DESC";
         
     
     }else{
