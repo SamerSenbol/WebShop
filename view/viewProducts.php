@@ -14,7 +14,7 @@
                 <br>
                 <br>
                 <div class="single-products-catagory clearfix">
-                   <?php echo '<img style="width:350px; height:350px;" src="data:image/jpeg;base64,'
+                   <?php echo '<img style="width:200px; height:200px;" src="data:image/jpeg;base64,'
                    .base64_encode( $row['Image'] ).'"/>';?>
                     <div class="line"></div>
                     <br>
@@ -22,7 +22,7 @@
                     <h5><?php echo $row['ProductName']; ?></h5>
                     <p><?php echo $row['Description']; ?></p>
                     <button
-                        class="btn amado-btn w-50" 
+                        class="btn amado-btn w-10" 
                         onclick="addtocart(<?php echo $prodID; ?>,
                         '<?php echo $prodName; ?>',
                         <?php echo $prodPrice; ?>)">

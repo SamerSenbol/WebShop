@@ -10,10 +10,13 @@ if(isset($_GET['categoryID'])){
                 <?php
             }
         }
-        $sql = "SELECT * FROM `products` WHERE `Categoryid` = '$categoryID'  ORDER BY `Id` DESC";
-        
+        $sql = "SELECT `products`.`Id` as `Id` , `products`.`ProductName`, `products`.`Description`, 
+        `products`.`Image`, `products`.`Price`,`products`.`Quantity`, `categories`.`Name`, `categories`.`Id` as `cateID`
+        FROM `categories-relation`
+    INNER JOIN `products` ON `products`.`Id` = `categories-relation`.`productId`
+    INNER JOIN `categories` ON `categories`.`Id` = `categories-relation`.`categories-Id`
+    WHERE `categories-relation`.`categories-Id` = '$categoryID'";   
     
     }else{
-        $sql = "SELECT * FROM `products`  ORDER BY `Id` DESC";
-    
+       $sql = "SELECT * FROM `products`  ORDER BY `Id` DESC";
     }
